@@ -8,7 +8,7 @@ h3 {
 }
 
 p {
-  color: blueviolet;
+  color: #000;
 }
 
 /* Classes  */
@@ -275,4 +275,220 @@ h2 {
 
 .texto-box-model {
   background-color: #4f5e00;
+}
+
+/* Text align */
+.text-aligned {
+  text-align: right;
+}
+
+.container-center {
+  text-align: center;
+  width: 300px;
+  border: 1px solid red;
+}
+
+/* Text decoration */
+.underline {
+  text-decoration: underline;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.remove-underline {
+  text-decoration: none;
+  color: red;
+}
+
+/* Text transform */
+.upper {
+  text-transform: uppercase;
+}
+
+.lower {
+  text-transform: lowercase;
+}
+
+/* Letter spacing */
+.spacing {
+  letter-spacing: 5px;
+}
+
+/* Fontes */
+.serif {
+  font-family: Georgia;
+}
+
+.sans-serif {
+  font-family: Helvetica;
+}
+
+.monospace {
+  font-family: "Courier New";
+}
+
+.fantasy {
+  font-family: fantasy;
+}
+
+/* Text style */
+.italic {
+  font-style: italic;
+}
+
+.oblique {
+  font-style: oblique;
+}
+
+/* Font weight */
+.thin .bold .bolder {
+  font-family: sans-serif;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.bolder {
+  font-weight: 900;
+}
+
+/* Font size */
+.small {
+  font-size: 6px;
+}
+
+.big {
+  font-size: 78px;
+}
+
+/* Display */
+.inline-box {
+  width: 50px;
+  height: 50px;
+  background-color: #4f5e00;
+  margin: 10px;
+  display: inline-block;
+}
+
+.block {
+  display: block;
+  background-color: #555;
+  margin: 10px;
+}
+
+.invisible {
+  display: none;
+}
+
+/* Static */
+.static {
+  position: static;
+  background-color: #391;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+}
+
+/* Relative */
+.relative {
+  position: relative;
+  background-color: #399;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  left: 40px;
+}
+
+/* Absolute */
+.absolute {
+  position: absolute;
+  background-color: #123;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  top: 2px;
+  right: 2px;
+}
+
+/* Absolute e relative */
+.relative-container {
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+  margin-top: 120px;
+  position: relative;
+}
+
+.absolute-1, .absolute-2 {
+  width: 50px;
+  height: 50px;
+  background-color: #422;
+  position: absolute;
+}
+
+.absolute-1 {
+  top: 4px;
+  left: 4px;
+}
+
+.absolute-2 {
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Fixed */
+.fixed {
+  width: 100px;
+  height: 100px;
+  border: 1px solid blue;
+  background-color: #19a;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+
+/* Sticky */
+.sticky {
+  width: 100px;
+  height: 100px;
+  border: 1px solid yellow;
+  background-color: #234;
+  position: sticky;
+  top: 10px;
+}
+
+/* z-index */
+.absolute-3, .absolute-4, .absolute-5 {
+  width: 50px;
+  height: 50px;
+  background-color: #159;
+  position: absolute;
+}
+
+.absolute-3 {
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.absolute-4 {
+  top: 10px;
+  left: 10px;
+  background-color: #19a;
+  z-index: 2;
+}
+
+.absolute-5 {
+  top: 40px;
+  left: 40px;
+  background-color: #453;
+  z-index: 1;
 }
