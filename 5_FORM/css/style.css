@@ -10,3 +10,8 @@ div input,
 div label {
   display: block;
 }
+
+.radio input,
+.radio label {
+  display: inline-block;
+}
