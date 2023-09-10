@@ -133,6 +133,28 @@ a:hover {
 }
 
 /* Responsivo */
+@media (max-width: 780px){
+  .container{
+    flex-direction: column;
+  }
+
+  #sidebar {
+    text-align: center;
+  } 
+
+  #search-bar form{
+    justify-content: center;
+  }
+
+  #search-bar form input[type="text"]{
+    width: 70%;
+  }
+
+  #tags-container{
+    justify-content: center;
+  }
+}
+
 @media (max-width: 450px) {
   .container {
     flex-wrap: wrap;
