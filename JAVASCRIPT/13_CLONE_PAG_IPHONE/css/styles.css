@@ -126,7 +126,7 @@ header nav{
 }
 
 #main-content #product-image.changing{
-  opacity: 0.5s;
+  opacity: 0.5;
 }
 
 #image-picker{
@@ -185,7 +185,31 @@ header nav{
   outline: 2px solid #43a1ff;
 }
 
-@media(max-width: 480px){
+@media(max-width: 999px){
+  #main-content{
+    overflow: hidden;
+  }
+}
+
+@media(max-width: 645px){
+  #bottom-header h3{
+    font-size: .8rem;
+  }
+  
+  #bottom-header-inner{
+    margin: 0 auto;
+  }
+
+  #bottom-header-inner a{
+    font-size: .6rem;
+  }
+
+  #bottom-header-inner .btn{
+    padding: .4rem .6rem;
+  }  
+}
+
+@media(max-width: 495px){
   #navbar li{
     display: none;
   }
