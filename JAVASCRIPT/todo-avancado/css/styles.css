@@ -12,6 +12,10 @@ body {
   background-size: cover;
 }
 
+html {
+  height: 100vh;
+}
+
 button {
   background-color: #dfdfdf;
   color: #21214e;
