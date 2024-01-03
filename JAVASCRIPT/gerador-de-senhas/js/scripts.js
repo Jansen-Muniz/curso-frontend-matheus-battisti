@@ -1,6 +1,6 @@
 //Seleção de elementos
 const generatePasswordButton = document.querySelector('#generate-password')
-const generatePasswordElement = document.querySelector('#generated-password')
+const generatedPasswordElement = document.querySelector('#generated-password')
 
 //novas funcionalidades
 const openCloseGeneratorButton = document.querySelector('#open-generate-password')
@@ -66,8 +66,8 @@ const generatePassword = (getLetterLowerCase, getLetterUpperCase, getNumber, get
 
   password = password.slice(0, passwordLength)
 
-  generatePasswordElement.style.display = 'block'
-  generatePasswordElement.querySelector('h4').innerText = password
+  generatedPasswordElement.style.display = 'block'
+  generatedPasswordElement.querySelector('h4').innerText = password
 }
 
 //Eventos
@@ -82,4 +82,17 @@ generatePasswordButton.addEventListener('click', () => {
 
 openCloseGeneratorButton.addEventListener('click', () => {
   generatePasswordContainer.classList.toggle('hide')
+})
+
+copyPasswordButton.addEventListener('click', e => {
+  e.preventDefault()
+
+  const password = generatedPasswordElement.querySelector('h4').innerText
+
+  navigator.clipboard.writeText(password)
+    .then(() => copyPasswordButton.innerText = 'Senha copiada com sucesso!')
+
+  setTimeout(() => {
+    copyPasswordButton.innerText = 'Copiar'
+  }, 1000)
 })
