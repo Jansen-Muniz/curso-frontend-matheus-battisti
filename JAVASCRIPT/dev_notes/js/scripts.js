@@ -4,11 +4,17 @@ const addNoteBtn = document.querySelector('.add-note')
 
 //funções
 const showNotes = () => {
+  cleanNotes()
+
   getNotes().forEach(note => {
     const noteElement = createNote(note.id, note.content, note.fixed)
 
     notesContainer.appendChild(noteElement)
   })
+}
+
+const cleanNotes = () => {
+  notesContainer.replaceChildren([])
 }
 
 const addNote = () => {
@@ -71,13 +77,17 @@ const toggleFixNote = (id) => {
   targetNote.fixed = !targetNote.fixed
 
   saveNotes(notes)
+  showNotes()
 }
 
 //local storage
 const getNotes = () => {
   const notes = JSON.parse(localStorage.getItem('notes') || '[]')
 
-  return notes
+  const orderedNotes = notes.sort((a, b) =>
+    a.fixed > b.fixed ? -1 : 1)
+
+  return orderedNotes
 }
 
 const saveNotes = (notes) => {
