@@ -74,6 +74,12 @@ const createNote = (id, content, fixed) => {
   }
 
   //eventos do elemento
+  element.querySelector('textarea').addEventListener('keyup', (e) => {
+    const noteContent = e.target.value
+
+    updateNote(id, noteContent)
+  })
+
   element.querySelector('.bi-pin').addEventListener('click', () => {
     toggleFixNote(id)
   })
@@ -128,6 +134,16 @@ const copyNote = (id) => {
   notesContainer.appendChild(noteElement)
 
   notes.push(noteElement)
+
+  saveNotes(notes)
+}
+
+const updateNote = (id, newContent) => {
+  const notes = getNotes()
+
+  const targetNote = notes.filter(note => note.id === id)[0]
+
+  targetNote.content = newContent
 
   saveNotes(notes)
 }
